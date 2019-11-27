@@ -17,7 +17,8 @@
 <script>
     var frm = document.frm;
     frm.btn_insert.onclick=function(){
-        
+        frm.action = "test_re";
+        frm.submit();
     }
 
 

@@ -2,7 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shop.shop.mapper.ShopMapper">
     <select id="getAll" resultType="com.shop.shop.model.MemberVo">
-        SELECT * FROM TEST;
+        select * from test01
+    </select>
+
+    <insert id="insertMember" parameterType="com.shop.shop.model.MemberVo">
+        insert into smember(mid, mname, mpwd, mDate, mjoin, mgender, memail, mphone)
+        values(#{mId}, #{mName}, #{mPwd}, #{mDate}, #{mJoin}, #{mGender}, #{mEmail}, #{mPhone})
+
+    </insert>
+
+    <select id="login" parameterType="com.shop.shop.model.MemberVo" resultType="com.shop.shop.model.MemberVo">
+	    select mId, mName, mGender from smember where mid = #{mId} and mpwd = #{mPwd}
     </select>
 </mapper>
 

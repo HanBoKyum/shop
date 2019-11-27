@@ -5,6 +5,7 @@ import com.shop.shop.model.MemberVo;
 import java.util.List;
 
 public interface ShopMapper {
-    public List<MemberVo> getAll() throws Exception;
-
+    List<MemberVo> getAll() throws Exception;
+    List<MemberVo> insertMember(MemberVo vo) throws Exception;
+    MemberVo login(MemberVo vo) throws Exception;
 }

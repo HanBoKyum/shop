@@ -15,20 +15,24 @@ import javax.sql.DataSource;
 public class DatabaseConfig {
 
     @Bean
-    public SqlSessionFactory sqlSessionFactory (DataSource dataSource) throws Exception {
-        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
-
-        sqlSessionFactory.setDataSource(dataSource);
-        sqlSessionFactory.setTypeAliasesPackage("com.shop.shop.model");
-
-        return sqlSessionFactory.getObject();
+    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+        final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource);
+        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        sessionFactory.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));
+        return sessionFactory.getObject();
     }
 
     @Bean
-    public SqlSessionTemplate sqlSession (SqlSessionFactory sqlSessionFactory) {
-
-        return new SqlSessionTemplate(sqlSessionFactory);
+    public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) throws Exception {
+        final SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
+        return sqlSessionTemplate;
     }
+
+
 }
+
+
+
 
 

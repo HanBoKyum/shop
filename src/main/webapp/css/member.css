@@ -52,23 +52,23 @@ a{
    
 
 .icon_box li.agree_icon{
-   background-image: url(../mem_images/agree_g.png);
+   background-image: url(../css/mem_images/agree_g.png);
 }
 
 .icon_box li.insert_icon{
-   background-image: url(../mem_images/insert_g.png);
+   background-image: url(../css/mem_images/insert_g.png);
 
 }
 
 .icon_box li.result_icon{
-   background-image: url(../mem_images/result_g.png);
+   background-image: url(../css/mem_images/result_g.png);
 
 }
 
 /* insert_agree----------------------------------------------------------*/
 
 #insert_agree .icon_box li.agree_icon{
-   background-image: url(../mem_images/agree.png);
+   background-image: url(../css/mem_images/agree.png);
    color:#000;
 }
 
@@ -129,7 +129,7 @@ a{
 /* insert----------------------------------------------------------*/
 
 #insert .icon_box li.insert_icon{
-   background-image: url(../mem_images/insert.png);
+   background-image: url(../css/mem_images/insert.png);
    color:#000;
 }
 
@@ -195,7 +195,7 @@ a{
 
 /* insert_result----------------------------------------------------------*/
 #insert_result .icon_box li.result_icon{
-   background-image: url(../mem_images/result.png);
+   background-image: url(../css/mem_images/result.png);
    color:#000;
 }
 

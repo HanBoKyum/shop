@@ -66,7 +66,7 @@ if(content == null) content = "main";
 		                <c:when test="${sessionScope.user_id eq null}">
 		                   <a href="index.jsp?content=go_notice_search.not"><span class="rm">공지사항</span></a>
 		                   <a href="index.jsp?content=go_insert"><span class="rm">회원가입</span></a>
-		                   <a href="index.jsp?content=go_login.mem"><span class="rm">로그인</span></a>
+		                   <a href="index.jsp?content=go_login"><span class="rm">로그인</span></a>
 		                </c:when>
 
 		                 <c:when test="${sessionScope.user_id eq 'admin'}">
@@ -80,7 +80,7 @@ if(content == null) content = "main";
 		                    <a href="index.jsp?content=go_notice_search.not"><span class="rm">공지사항</span></a>
 		                    <a href="index.jsp?content=mypage.mem"><span class="rm">마이페이지</span></a>
 		                   	<a href="index.jsp?content=cart.trade"><span class="rm">장바구니</span></a>
-		                    <a href="logout.mem"><span class="rm">로그아웃</span></a>
+		                    <a href="logout"><span class="rm">로그아웃</span></a>
 		                </c:when>
 
 	           		</c:choose>
